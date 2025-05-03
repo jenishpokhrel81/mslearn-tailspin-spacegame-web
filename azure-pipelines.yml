@@ -14,10 +14,14 @@ steps:
     packageType: sdk
     version: '6.x'
 
-- task: Npm@1
+- script: |
+    npm install
   displayName: 'Run npm install'
-  inputs:
-    verbose: false
+
+- script: |
+    npm install -g gulp
+  displayName: 'Install gulp globally'
+
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
