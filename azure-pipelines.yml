@@ -14,13 +14,10 @@ steps:
     packageType: sdk
     version: '6.x'
 
-- script: |
-    npm install
-  displayName: 'Run npm install'
 
 - script: |
-    npm install -g gulp
-  displayName: 'Install gulp globally'
+    install -g gulp
+  displayName: 'Install gulp globally
 
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
